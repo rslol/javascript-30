@@ -1,0 +1,79 @@
+body {
+	background-color: black;
+	margin: 0;
+	font-family: "Montserrat", "Avenir";
+}
+
+.square {
+	width: 30%;
+	background: blue;
+	padding-top: 30%;
+	float: left;
+	margin: 1.66%;
+	/*how to round out the corners of the sqaure*/
+	border-radius: 15%;
+	/*how to fade out the sqaures after they were clicked*/
+	transition: background .35s;
+	-webkit-transition: background .35s;
+	-moz-transition: background .35s;
+}
+
+#container {
+	max-width: 600px;
+	margin: 20px auto;
+}
+
+h1 {
+	color: white;
+	line-height: 1.1;
+	padding: 20px 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: steelblue;
+	margin: 0;
+}
+
+
+#stripe {
+	background: white;
+	height: 30px;
+	text-align: center;
+}
+
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+button {
+	border: none;	
+	background: none;
+	text-transform: uppercase;
+	/* to make the button take up all the space in the stripe div*/
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing:  1px;
+	font-size: inherit;
+	/*to make the hover effect fade in*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	outline: none;
+}
+
+#message {
+	display: inline-block;
+	width: 20%;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
+

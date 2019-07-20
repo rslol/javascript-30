@@ -10,7 +10,7 @@ const winCombos = [
     [0,3,6],
     [1,4,7],
     [2,5,8],
-    [2,4,6]
+    [6,4,2]
 ];
 
 const cells = document.querySelectorAll('.cell');
@@ -37,10 +37,11 @@ const turn = (squareId, player) => {
 }
 
 const checkWin = (board, player) => {
-    let plays = board.reduce((a, e, i) => (e === player) ? a.concat(i) : a, []);
+    let plays = board.reduce((a, e, i) => 
+        (e === player) ? a.concat(i) : a, []);
     let gameWon = null;
     for (let [index, win] of winCombos.entries()) {
-        if (win.every(elem => plays.indexOf(elem > -1))) {
+        if (win.every(elem => plays.indexOf(elem) > -1)) {
             gameWon = {index: index, player: player};
             break;
         }
@@ -57,5 +58,6 @@ const gameOver = (gameWon) => {
     for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', turnClick, false);
     }
+
 }
 startGame();
