@@ -117,8 +117,8 @@ for (var i = 0; i < squares.length; i++) {
 function changeColor(color){
 	//loop through all squares
 	for(var i = 0; i < squares.length; i++){
-	//change each square to match given color 
-	squares[i].style.backgroundColor = color;
+	    //change each square to match given color 
+	    squares[i].style.backgroundColor = color;
 	}
 }
 
